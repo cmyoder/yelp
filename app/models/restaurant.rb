@@ -9,6 +9,10 @@ class Restaurant < ApplicationRecord
 
   # Indirect associations
 
+  has_many   :tags,
+             :through => :descriptors,
+             :source => :tag
+
   # Validations
 
 end
